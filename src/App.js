@@ -1,9 +1,15 @@
 import React from 'react'
 
+import Layout from './hoc/Layout'
+import ButtonPanel from './components/ButtonPanel'
+import { headerMetadata } from './config/Metadata'
+
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">Hello World</header>
+			<Layout businessName={headerMetadata.name}>
+				<ButtonPanel />
+			</Layout>
 		</div>
 	)
 }
