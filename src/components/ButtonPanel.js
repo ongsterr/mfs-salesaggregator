@@ -17,13 +17,18 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-const ButtonPanel = () => {
+const ButtonPanel = ({ buttonOneClick }) => {
 	const classes = useStyles()
 
 	return (
 		<div className={classes.panel}>
 			<Paper elevation={0}>
-				<Button variant="outlined" fullWidth className={classes.button}>
+				<Button
+					variant="outlined"
+					fullWidth
+					className={classes.button}
+					onClick={buttonOneClick}
+				>
 					Run Sales Aggregator
 				</Button>
 				<Button variant="outlined" fullWidth className={classes.button}>
